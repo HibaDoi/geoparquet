@@ -1,0 +1,18 @@
+{
+"type": "FeatureCollection",
+"name": "Point mohammedia",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 2, "genre": "Gare" }, "geometry": { "type": "Point", "coordinates": [ -7.387448636070064, 33.695588470145054 ] } },
+{ "type": "Feature", "properties": { "id": 3, "genre": "CLINIQUE" }, "geometry": { "type": "Point", "coordinates": [ -7.398153685708942, 33.701149536176516 ] } },
+{ "type": "Feature", "properties": { "id": 4, "genre": "CLINIQUE" }, "geometry": { "type": "Point", "coordinates": [ -7.385673073181285, 33.697529278338962 ] } },
+{ "type": "Feature", "properties": { "id": 6, "genre": "MOSQUE" }, "geometry": { "type": "Point", "coordinates": [ -7.392392765524167, 33.701232801067128 ] } },
+{ "type": "Feature", "properties": { "id": 6, "genre": "MOSQUE" }, "geometry": { "type": "Point", "coordinates": [ -7.4003595085067, 33.704680483501555 ] } },
+{ "type": "Feature", "properties": { "id": 10, "genre": "Pharmacie" }, "geometry": { "type": "Point", "coordinates": [ -7.389496036560759, 33.698752693413311 ] } },
+{ "type": "Feature", "properties": { "id": 11, "genre": "Pharmacie" }, "geometry": { "type": "Point", "coordinates": [ -7.390990746486982, 33.700777069607845 ] } },
+{ "type": "Feature", "properties": { "id": 12, "genre": "Pharmacie" }, "geometry": { "type": "Point", "coordinates": [ -7.39762594129779, 33.699590718173496 ] } },
+{ "type": "Feature", "properties": { "id": 13, "genre": "Bank" }, "geometry": { "type": "Point", "coordinates": [ -7.392431282202487, 33.697738524507244 ] } },
+{ "type": "Feature", "properties": { "id": 14, "genre": "Bank" }, "geometry": { "type": "Point", "coordinates": [ -7.396918323815803, 33.698920780311489 ] } },
+{ "type": "Feature", "properties": { "id": 15, "genre": "Hotel" }, "geometry": { "type": "Point", "coordinates": [ -7.395433931930954, 33.706995099342315 ] } }
+]
+}

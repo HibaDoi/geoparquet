@@ -1,40 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        /* Center the form and input elements */
-        form {
-            text-align: center;
-        }
+{% extends 'index.html' %}
 
-        /* Style the input elements */
-        input[type="file"],
-        input[type="text"] {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-right: 10px;
-        }
+{% block content %}
 
-        /* Style the submit button */
-        input[type="submit"] {
-            padding: 10px 20px;
-            background-color: #007bff; /* Blue color, you can change it to your desired color */
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
-</head>
 
-<body>
+
     <form  action ="/gp/upload/" method="POST" enctype="multipart/form-data">
-        <div class="center">
-            <label for="essai">ESSAI NON FONCTIONNEL</label>
+        <div class="center" id="drop-area">
+            <label for="essai">ESSAI NON FONCTIONNEL</label><br>
             <input type="file"  id="essai" name="p"  multiple ><input type="submit"> 
             
         </div>
@@ -42,15 +14,15 @@
     </form>
     <form  action ="/gp/uploadd/" >
         <div class="center">
-            <label for="e">shp to geoparquet</label>
-            <input type="text"  id="e" name="pp"  ><input type="submit"> 
+            <label for="e">shp to geoparquet</label><br>
+            <input type="text"  id="e" name="pp"  multiple ><input type="submit"> 
             
         </div>
         
     </form>
     <form  action ="/gp/uploaddd/" >
         <div class="center">
-            <label for="h">geojson to geoparquet</label>
+            <label for="h">geojson to geoparquet</label><br>
             <input type="text" id="h" name="ppp"  ><input type="submit"> 
             
         </div>
@@ -58,7 +30,7 @@
     </form>
     <form  action ="/gp/upload1/" >
         <div class="center">
-            <label for="p">csv to geoparquet</label>
+            <label for="p">csv to geoparquet</label><br>
             <input type="text"  id="p" name="pppp"  ><input type="submit"> 
             
         </div>
@@ -66,7 +38,7 @@
     </form>
     <form  action ="/gp/upload2/" >
         <div class="center">
-            <label for="o">geoparquet to shp</label>
+            <label for="o">geoparquet to shp</label><br>
             <input type="text"  id="o" name="geop_to_shp"  ><input type="submit"> 
             
         </div>
@@ -74,7 +46,7 @@
     </form>
     <form  action ="/gp/upload3/" >
         <div class="center">
-            <label for="ii">geoparquet to geojson</label>
+            <label for="ii">geoparquet to geojson</label><br>
             <input type="text"  id="ii" name="uuu"  ><input type="submit"> 
             
         </div>
@@ -82,10 +54,12 @@
     </form>
     <form  action ="/gp/upload4/" >
         <div class="center">
-            <label for="iii">geoparquet to csv</label>
+            <label for="iii">geoparquet to csv</label><br>
             <input type="text"  id="iii" name="uuui"  ><input type="submit"> 
             
         </div>
         
     </form>
-</html>
+
+    
+    {% endblock %}

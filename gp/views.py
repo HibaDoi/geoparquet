@@ -20,7 +20,8 @@ def up(request):
             filename = fs.save(myfile.name, myfile)
             uploaded_file_url = fs.url(filename)
             print(uploaded_file_url)
-            gdf = gpd.read_file(uploaded_file_url)
+            gdf = gpd.read_file("/parquet"+uploaded_file_url)
+            #gdf = gpd.read_file(uploaded_file_url)
             #gdf = gpd.read_file(str(request.GET["p"]))
             response = HttpResponse(
                 content_type="text/geoparquet",

@@ -117,8 +117,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "/static/"
-MEDIA_ROOT  = os.path.join(BASE_DIR, 'mediaappp')
-MEDIA_URL = '/mediaappp/'
+STATICFILES_DIRS = [BASE_DIR /'static']
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+#MEDIA_ROOT  = os.path.join(BASE_DIR, 'mediaappp')
+
+
+MEDIA_ROOT  = 'hibaa'
+MEDIA_URL = '/hibaa/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
