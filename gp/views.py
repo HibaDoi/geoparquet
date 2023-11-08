@@ -31,7 +31,7 @@ def up(request):
             return response
 def upp(request):
        
-            gdf = gpd.read_file(str(request.GET["pp"]))
+            gdf = gpd.read_file("E:/Desktop/doc/"+str(request.GET["pp"]))
 
             response = HttpResponse(
                 content_type="text/geoparquet",
@@ -41,7 +41,7 @@ def upp(request):
             return response
 def uppp(request):
        
-            gdf = gpd.read_file(str(request.GET["ppp"]))
+            gdf = gpd.read_file("E:/Desktop/doc/"+str(request.GET["ppp"]))
 
             response = HttpResponse(
                 content_type="text/geoparquet",
@@ -51,7 +51,7 @@ def uppp(request):
             return response
 def to(request):
        
-            df = pd.read_csv(str(request.GET["pppp"]))
+            df = pd.read_csv("E:/Desktop/doc/"+str(request.GET["pppp"]))
             gdf = gpd.GeoDataFrame(df, geometry=gpd.GeoSeries.from_wkt(df['geometry']))
 
             response = HttpResponse(
@@ -63,7 +63,7 @@ def to(request):
             return response
 def too(request):
        
-            gdf = gpd.read_parquet(str(request.GET["geop_to_shp"]))
+            gdf = gpd.read_parquet("E:/Desktop/doc/"+str(request.GET["geop_to_shp"]))
             response = HttpResponse(
                 content_type="application/zip",
                 headers={"Content-Disposition": 'attachment; filename="E://Desktop//AA//hhh.shp"'},
@@ -76,7 +76,7 @@ def too(request):
 
 def tooo(request):
        
-            gdf = gpd.read_parquet(str(request.GET["uuu"]))
+            gdf = gpd.read_parquet("E:/Desktop/doc/"+str(request.GET["uuu"]))
             response = HttpResponse(
                 content_type="text/geojson",
                 headers={"Content-Disposition": 'attachment; filename="hhh.geojson"'},
@@ -88,7 +88,7 @@ def tooo(request):
             return response
 def toooo(request):
        
-            gdf = gpd.read_parquet(str(request.GET["uuui"]))
+            gdf = gpd.read_parquet("E:/Desktop/doc/"+str(request.GET["uuui"]))
             #df = gdf.drop(columns=['geometry'])
             response = HttpResponse(
                 content_type="text/csv",
@@ -99,5 +99,3 @@ def toooo(request):
     
 
             return response
-
-
