@@ -6,7 +6,7 @@ import geopandas as gpd
 import pandas as pd
 from django.views.decorators.csrf import csrf_exempt
 import tempfile
-import zipfile
+from zipfile import ZipFile
 import os
 import io
 # Create your views here.
@@ -33,6 +33,7 @@ def upp(request):
        
             gdf = gpd.read_file("E:/Desktop/doc/"+str(request.GET["pp"]))
 
+            
             response = HttpResponse(
                 content_type="text/geoparquet",
                 headers={"Content-Disposition": 'attachment; filename="hereyouare.geoparquet"'},
@@ -64,15 +65,34 @@ def to(request):
 def too(request):
        
             gdf = gpd.read_parquet("E:/Desktop/doc/"+str(request.GET["geop_to_shp"]))
-            response = HttpResponse(
-                content_type="application/zip",
-                headers={"Content-Disposition": 'attachment; filename="E://Desktop//AA//hhh.shp"'},
-            )
-            gdf.to_file(response,driver='ESRI Shapefile')
+            basename = 'basename'
+
+            # Convert to shapefile and serve it to the user
+            with tempfile.TemporaryDirectory() as tmp_dir:
+
+                # Export gdf as shapefile
+                gdf.to_file(os.path.join(tmp_dir, f'{basename}.shp'), driver='ESRI Shapefile')
+
+                # Zip the exported files to a single file
+                tmp_zip_file_name = f'{basename}.zip'
+                tmp_zip_file_path = f"{tmp_dir}/{tmp_zip_file_name}"
+                tmp_zip_obj = ZipFile(tmp_zip_file_path, 'w')
+
+                for file in os.listdir(tmp_dir):
+                    if file != tmp_zip_file_name:
+                        tmp_zip_obj.write(os.path.join(tmp_dir, file), file)
+
+                tmp_zip_obj.close()
+
+                # Return the file
+                with open(tmp_zip_file_path, 'rb') as file:
+                    response = HttpResponse(file, content_type='application/force-download')
+                    response['Content-Disposition'] = f'attachment; filename="{tmp_zip_file_name}"'
+                    return response
 
         
 
-            return response
+            #return response
 
 def tooo(request):
        

@@ -32,7 +32,14 @@ body {
 form {
           text-align: center;
       }
+      table {
+          margin: 0 auto;
+      }
 
+      /* Add some basic styling for your forms */
+      form {
+          margin: 10px;
+      }
       /* Style the input elements */
 input[type="file"],
 input[type="text"] {
@@ -446,6 +453,7 @@ ul.email li i {
      margin-top: 10px;
      font-family: 'Open Sans', sans-serif;
      text-align: left;
+     background-color: rgba(75, 69, 69, 0.5);
 }
 
 .banner_main .bluid h1 {
@@ -591,7 +599,7 @@ ul.email li i {
 }
 
 .about .titlepage h2 {
-     color: #fff;
+     color: rgb(8, 8, 8)c2c;
 }
 
 .about .titlepage p {

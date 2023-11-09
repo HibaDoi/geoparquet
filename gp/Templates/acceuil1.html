@@ -11,6 +11,10 @@
     </div>
     
 </form>-->
+<div class="centre">
+<table>
+    <tr>
+        <td>
     
     <form  action ="/gp/uploadd/" >
         <div class="center">
@@ -20,22 +24,8 @@
         </div>
         
     </form>
-    <form  action ="/gp/uploaddd/" >
-        <div class="center">
-            <label for="h">geojson to geoparquet</label><br>
-            <input type="file" id="h" name="ppp"  ><input type="submit"> 
-            
-        </div>
-        
-    </form>
-    <form  action ="/gp/upload1/" >
-        <div class="center">
-            <label for="p">csv to geoparquet</label><br>
-            <input type="file"  id="p" name="pppp"  ><input type="submit"> 
-            
-        </div>
-        
-    </form>
+</td>
+<td>
     <form  action ="/gp/upload2/" >
         <div class="center">
             <label for="o">geoparquet to shp</label><br>
@@ -44,6 +34,21 @@
         </div>
         
     </form>
+</td>
+</tr>
+<tr>
+    <td>
+        <form  action ="/gp/uploaddd/" >
+            <div class="center">
+                <label for="h">geojson to geoparquet</label><br>
+                <input type="file" id="h" name="ppp"  ><input type="submit"> 
+                
+            </div>
+            
+        </form>
+    
+</td>
+<td>
     <form  action ="/gp/upload3/" >
         <div class="center">
             <label for="ii">geoparquet to geojson</label><br>
@@ -51,7 +56,22 @@
             
         </div>
         
-    </form>
+    </form> 
+</td>
+</tr>
+<tr>
+    <td>
+    
+    <form  action ="/gp/upload1/" >
+        <div class="center">
+            <label for="p">csv to geoparquet</label><br>
+            <input type="file"  id="p" name="pppp"  ><input type="submit"> 
+            
+        </div>
+        
+    </form> 
+</td>
+<td>
     <form  action ="/gp/upload4/" >
         <div class="center">
             <label for="iii">geoparquet to csv</label><br>
@@ -60,6 +80,12 @@
         </div>
         
     </form>
+</td>
+</tr>
+<tr>
+    <td>
+    </table>
+</div>
 
     
     {% endblock %}
